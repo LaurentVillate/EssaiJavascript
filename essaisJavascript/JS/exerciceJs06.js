@@ -1,7 +1,11 @@
 var a = "100";
 var b = 100;
-var c = 1.00;
+var c = "1.00";
 var d = true;
 
 document.write ("Ceci est une chaîne de caractères:" + a +".")
-document.write (b = x--)
+console.log(b--)
+
+d = (!d)
+document.write(d)
+document.write(c+a)
