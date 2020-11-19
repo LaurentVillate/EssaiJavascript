@@ -1,43 +1,31 @@
-var mot = window.prompt("Entrez un mot");
-var voyelles = "a";
-var n = 0;
-
-for (i=0; i<mot.length; i++)
-{
- var substring = mot.substr(0, i);
-      console.log(substring);
- var indices = substring.indexOf("a")
- if (indices>=0)
-  {
-     n++;
-   }  
-}
-alert(n + " voyelles");
 
 
-
-
-////// code complété par M ///////
-
+/// L'utilisateur entre un mot////
 var mot = window.prompt ("Entrer un mot :");
-var voyelle = "aeiouy";
-var nbrevoyelle = 0;
-var consonnes = 0;
+/// Variable contenant l'ensemble des voyelle à la suite ///
+var voyelles = "aeiouy";
+/// Variable pour recevoir le nombre de voyelles ///
+var Nvoyelles = 0;
+/// Variable pour recevoir le nombre de consonnes ///
+var Nconsonnes = 0;
 
+/// Pour chaque itération, et pour toute la longueur du mot, la boucle isole les voyelles, les ajoute dans Nvoyelles, sinon les autres lettres sont placés dans Nconsonnes /// 
 for (i=0; i<mot.length; i++)
 {
 
 var lettre = mot.substr(i,1);
 //  remplace : lettre == a, lettre = b ....
-if(voyelle.indexOf(lettre)>=0)
+if(voyelles.indexOf(lettre)>=0)
 
 // 
-{nbrevoyelle++;}
+{Nvoyelles++;}
 
 else if ((lettre>= 'a' && lettre<='z'))
 
-{consonnes++;}
+{Nconsonnes++;}
 }
+/// Après la boucle, affichage du nombre de voyelles et du nombre de consonnes ///
+window.alert("Dans ce mot, il y a : " + Nvoyelles + " voyelles");
+window.alert("Dans ce mot, il y a : " + Nconsonnes + " consonnes");
 
-window.alert("le nombre de voyelle est de :"+nbrevoyelle);
-window.alert("le nombre de consonnes est :"+consonnes);
+/// Sur ce code j'ai eu quelques bonnes intuitions mais... merci Mohammed...///
