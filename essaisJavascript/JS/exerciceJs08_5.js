@@ -18,11 +18,15 @@ var lettre = mot.substr(i,1);
 if(voyelles.indexOf(lettre)>=0)
 
 // 
-{Nvoyelles++;}
+{
+    Nvoyelles++;
+}
 
 else if ((lettre>= 'a' && lettre<='z'))
 
-{Nconsonnes++;}
+{
+    Nconsonnes++;
+}
 }
 /// Après la boucle, affichage du nombre de voyelles et du nombre de consonnes ///
 window.alert("Dans ce mot, il y a : " + Nvoyelles + " voyelles");
