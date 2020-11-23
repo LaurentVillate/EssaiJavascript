@@ -1,10 +1,12 @@
-///Fonction saisie d'un entier /// 
+/// Fonction saisie d'un entier /// 
 
 function getInteger()
 {
-    n = parseInt(window.prompt("Saisissez un entier"));
+    n = parseInt(window.prompt("Saisissez un nombre"));
     return n;
 }
+
+/// Initialisation du tableau, saisie du nombre de postes dans le tableau ///
 
 function initTab()
 {
@@ -12,31 +14,62 @@ function initTab()
     tab = Array(Npostes);
 }
 
+/// Saisie des postes du tableau et calcul de la somme des postes ///
+
 function saisieTab()
 {
     var i = 0;
+    somme = 0;
     while (i<Npostes)
     {
+
         poste = getInteger();
-        console.log(tab[i]= [poste])
+
+
+        tab[i]= [poste];
         i++;
+        somme = somme+poste;
     }
     return ;
 }
 
+/// Afficher tous les postes du tableau ///
+
 function afficheTab()
 {
-    document.write(tab);
+    window.alert("Postes du tableau: " + tab);
 }
 
-getInteger();
-console.log(n + " est un entier");
+/// Rechercher un élément du tableau par son rang. Le rang saisi ne peut être supérieur au nombre de rangs total ///
+
+function rechercheTab()
+{
+    rang = getInteger();
+    elementrang = tab[rang];
+    if (rang>Npostes)
+    {
+        alert("Le nombre doit être compris entre 1 et " + Npostes);
+    }
+    else{
+        window.alert("Elément trouvé au rang n° " + rang + ": " + elementrang);  
+    }
+}
+
+/// Trouver le maximum parmi les postes, calculer la moyenne des postes ///
+
+function infoTab()
+{
+    maximum = Math.max.apply(null, tab);
+    document.write("Maximum: " + maximum);
+    moyenne = somme/Npostes;
+    window.alert("Maximum: " + maximum + "; Moyenne: " + moyenne);
+}
+
+/// appel des fonctions initTab et saisieTab. Les autres fonctions sont appelées dans le menu de la page html ///
 
 initTab();
-console.log("Tableau initialisé: " + tab);
 
 saisieTab();
 
-afficheTab();
 
 

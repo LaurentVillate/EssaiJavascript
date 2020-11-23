@@ -9,7 +9,7 @@ var m = 0;
 /// La boucle va tourner tant que le nombre saisi est différent de 0 ///
 while (n!=0)
 {
-    /// L'utilisateur saisit un nombre. Ajour de Parsint pour convertir la chaine de caractères saisi en nombre ///
+    /// L'utilisateur saisit un nombre. Ajout de Parsint pour convertir la chaine de caractères saisi en nombre ///
     n = parseInt(window.prompt("saisissez un nombre"));
     console.log("n vaut : " + n);
 /// Caculcul de la somme ///
