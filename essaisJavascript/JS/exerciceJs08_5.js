@@ -13,7 +13,7 @@ var Nconsonnes = 0;
 for (i=0; i<mot.length; i++)
 {
 
-var lettre = mot.substr(i,1);
+    var lettre = mot.substr(i,1);
 //  remplace : lettre == a, lettre = b ....
 if(voyelles.indexOf(lettre)>=0)
 

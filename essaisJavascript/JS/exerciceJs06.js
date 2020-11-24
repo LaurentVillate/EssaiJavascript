@@ -3,9 +3,18 @@ var b = 100;
 var c = "1.00";
 var d = true;
 
-document.write ("Ceci est une chaîne de caractères:" + a +".")
-console.log(b--)
+/// afficher la chaîne de caractère avec la variable a ///
 
-d = (!d)
-document.write(d)
-document.write(c+a)
+document.write ("Ceci est une chaîne de caractères:" + a +".");
+
+/// Application à b de l'opérateur de décrémentation ///
+
+console.log(b--);
+
+/// Inversion de la valeur de d ///
+
+d = (!d);
+document.write(d);
+
+/// Ajouter c à a ///
+document.write(c+a);
